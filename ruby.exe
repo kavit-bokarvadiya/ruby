@@ -1,0 +1,117 @@
+What is Ruby?
+----------------
+Ruby ek high-level, interpreted programming language hai jo Yukihiro Matsumoto ne banayi thi. Yeh language simple syntax aur readability ke liye famous hai — bilkul English jaisi.
+
+Features:
+----------
+
+--> Object-Oriented ::
+-------------------------
+
+Ruby pure object-oriented programming (OOP) language hai!
+
+Iska matlab yeh hai ki Ruby mein har cheez object hoti hai — even primitive types like numbers, strings, and booleans. Matlab, har chhoti se chhoti cheez ko bhi object ke roop mein treat kiya jata hai.
+
+Key OOP Features in Ruby:
+
+Everything is an Object:
+--------------------------
+
+Jaise:
+------
+
+number = 10
+puts number.class # Output: Integer
+--> Yahaan 10 bhi ek object hai, aur class method se hum uska type dekh sakte hain.
+
+Encapsulation:
+----------------
+
+Ruby mein aap easily data ko encapsulate kar sakte ho using classes aur objects. Instance variables ko private bana sakte ho, aur methods ke through access kar sakte ho.
+
+Inheritance:
+-------------
+
+Aap ek class se doosri class ko inherit kar sakte ho:
+
+class Animal
+  def speak
+    puts "I can speak"
+  end
+end
+
+class Dog < Animal
+  def speak
+    puts "Bark!"
+  end
+end
+
+Polymorphism:
+-----------------
+class Dog
+  def speak
+    puts "Woof"
+  end
+end
+
+class Cat
+  def speak
+    puts "Meow"
+  end
+end
+
+def make_sound(animal)
+  animal.speak
+end
+
+dog = Dog.new
+cat = Cat.new
+
+make_sound(dog) # Output: Woof
+make_sound(cat) # Output: Meow
+
+Abstraction:
+--------------
+Ruby mein aap complex systems ko simple interface ke through represent kar sakte ho. Methods ko define karte waqt internal logic ko hide kar sakte ho.
+
+------
+
+Ruby ka OOP ka approach simple aur flexible hai, jo aapko code ko easily maintain aur reuse karne mein madad karta hai.
+
+
+---------------------
+Day 1: Ruby Basics
+---------------------
+
+Print Output – (puts ya print)
+--------------------------------
+
+puts:
+------ 
+Output ke baad ek new line dalta hai.
+
+print:
+------
+ Output ke baad new line nahi dalta.
+
+
+program ::
+------------
+
+puts "Hello, Ruby!"   # New line will be added
+print "Hello, Ruby!"  # No new line added
+
+
+
+
+
+
+
+
+
+
+Simple and clean syntax
+
+Dynamic typing
+
+Huge support from community and libraries (called "gems")
