@@ -102,6 +102,262 @@ puts "Hello, Ruby!"   # New line will be added
 print "Hello, Ruby!"  # No new line added
 
 
+input from user
+-------------------
+
+print "Enter your first name :: "
+first_name = gets.chomp
+print "Enter your last name :: "
+last_name = gets.chomp
+
+print "Your name is :: #{first_name} #{last_name}"
+
+program :: 2
+--------------
+
+puts "enter your name :: "
+name = gets.chomp
+puts "enter your age:: "
+age = gets.chomp
+puts "enter your city:: "
+city = gets.chomp
+
+puts "--------------------"
+puts "name :: #{name}"
+puts "age :: #{age}"
+puts "city :: #{city}"
+puts "--------------------"
+
+gets ka matlab hota hai:
+--------------------------- 
+
+"get string from user input". Yeh user se kuch bhi input lene ka kaam karta hai.
+
+Jaise hi user kuch likh ke Enter dabata hai, us input mein ek new line character (\n) bhi hota hai jo Enter key se aata hai.
+
+chomp ka kaam hai:
+----------------------- 
+
+us new line character ko hata dena.
+
+ Variables in Ruby:
+--------------------
+Ruby mein variables declare karna kaafi simple hai. Aap = (assignment operator) ka use karke variable ko value assign karte hain.
+
+Ruby Variables Overview
+---------------------------
+
+Introduction
+----------------
+In Ruby, variables are used to store data or references to objects. Ruby is a dynamically-typed language, which means that you don't need to declare the type of a variable explicitly. Variables in Ruby can hold any object, and their types are determined at runtime.
+
+Variable Types in Ruby
+-------------------------
+
+1. Local Variables:
+--------------------
+
+ These variables are defined within a method or a block. They are only accessible within that scope.
+
+2. Global Variables:
+---------------------
+
+ These variables are accessible from anywhere in the program, but they are not recommended due to their potential to cause confusion.
+
+3. Instance Variables:
+-----------------------
+
+ These variables are associated with an instance of a class. They are accessible within methods of the class using '@'.
+
+4. Class Variables:
+--------------------
+
+ These variables are shared across all instances of a class. They are defined using '@@'.
+
+5. Constants:
+---------------
+
+ Variables that hold constant values and their names are written in uppercase letters.
+
+Object-Oriented Nature and Memory Management
+----------------------------------------------------------
+
+In Ruby, everything is an object, and variables are references to these objects. Memory allocation for variables is dynamic and managed by Ruby's garbage collector. The size of an object depends on the class type and the object’s data.
+
+Predefined Datatypes (Classes) in Ruby
+--------------------------------------------
+
+Ruby does not have predefined primitive data types like some other languages. Instead, all data types in Ruby are represented as objects of classes. Here are some of the most common predefined datatypes in Ruby:
+
+1. String:
+----------
+
+ Represents sequences of characters. Example: 'Hello, Ruby!'
+
+2. Integer:
+------------
+ Represents whole numbers. Example: 10
+
+3. Float:
+---------
+ Represents decimal numbers. Example: 99.99
+
+4. Boolean:
+-------------
+
+ Represents true or false values. Example: true or false
+
+5. Array:
+----------
+
+ Represents ordered collections of objects. Example: [1, 2, 3]
+
+6. Hash:
+---------
+
+ Represents collections of key-value pairs. Example: { name: 'John', age: 30 }
+
+Memory Size in Ruby
+------------------------
+
+Ruby handles memory dynamically, and the size of an object depends on its type and data. While Ruby doesn't require you to manage memory size manually, you can check the size of an object using the `ObjectSpace.memsize_of` method.
+
+Example: Checking Object Size
+----------------------------------
+
+Here is an example to check the memory size of different objects using `ObjectSpace.memsize_of`: For example, an Integer may take around 40 bytes, a String’s size depends on its length, and an Array’s size depends on its elements.
+require 'objspace'
+
+    # Example: Integer
+    ---------------------
+
+    num = 100
+    puts "Size of num (Integer): #{ObjectSpace.memsize_of(num)} bytes"
+
+    # Example: String
+    --------------------
+
+    text = "Hello, Ruby!"
+    puts "Size of text (String): #{ObjectSpace.memsize_of(text)} bytes"
+
+    # Example: Array
+    -------------------
+
+    array = [1, 2, 3, 4, 5]
+    puts "Size of array: #{ObjectSpace.memsize_of(array)} bytes"
+    
+Conclusion
+-------------
+
+Ruby's approach to variables is flexible and dynamic. Variables in Ruby don't require a fixed type, and their types are determined at runtime. All data types in Ruby are objects, which are managed by Ruby’s memory allocation system. You can easily check the memory size of objects using built-in methods like `ObjectSpace.memsize_of`. Understanding Ruby's variable and memory handling system helps in writing efficient and effective Ruby programs.
+
+
+Key Differences:
+------------------
+
+Language Context:
+---------------------
+
+Ruby mein static variables ka direct support nahi hota, lekin class variables (@@) ki wajah se aap static-like behavior achieve kar sakte ho.
+
+C/C++/Java mein static variables ka ek well-defined concept hota hai.
+
+Scope:
+--------
+
+Class Variable:
+----------------
+
+ Ruby mein class-level variable hota hai jo all instances ke beech share hota hai.
+
+Static Variable:
+-----------------
+
+ Static variable typically ek single class-level variable hota hai jo class ke andar hi limit hota hai, na ki instances ke beech share hota hai.
+
+Modification:
+---------------
+
+Class Variable:
+----------------
+
+ Ruby mein agar aap kisi class variable ko modify karte ho, toh woh all objects (instances) mein reflect hota hai.
+
+Static Variable:
+----------------
+
+ Java ya C++ mein agar static variable modify hota hai, toh woh class ke sabhi instances mein reflect hota hai.
+
+Conclusion:
+-------------
+
+Ruby mein static variables ka koi direct concept nahi hota, lekin class variables (@@) ko aap static variable ki tarah use kar sakte ho.
+
+Agar aap C++/Java jaise languages mein kaam karte ho, toh static variables ka use specific class-level data ko manage karne ke liye hota hai, jo all instances ke liye common hota hai.
+
+
+datatypes:: 
+
+variable ya object ko nil assign kiya jata hai, toh iska matlab hai ki us variable mein koi meaningful value nahi hai.
+
+Ruby mein nil ka use kuch aise hota hai:
+---------------------------------------------
+
+Null or Empty Value:
+-----------------------
+
+ Jab aap kisi variable ko explicitly nil assign karte hain, toh wo variable kisi actual value ko hold nahi karta.
+
+Falsy Value:
+-------------
+
+ Ruby mein nil ko false ke roop mein treat kiya jata hai, yaani agar aap nil ko conditional statement mein use karte hain, toh wo false ki tarah behave karega.
+
+
+example ::
+------------
+
+name = "Kavit"   # String variable
+age = 25         # Integer variable
+height = 5.8     # Float variable
+
+Variable names ko lowercase se start karna hota hai (CamelCase bhi chal sakta hai). Variables ka type automatically decide hota hai, jo Ruby ki dynamic typing ka feature hai.
+
+Data Types in Ruby:
+----------------------
+
+Ruby mein kuch commonly used data types yeh hain:
+
+String: "Hello, Ruby"
+Integer: 42
+Float: 3.14
+Boolean: true, false
+Array: [1, 2, 3, 4]
+Hash: {key: "value"}
+
+
+Comments:
+-------------
+Ruby mein comments likhna bahut asaan hai. Aap # ka use karke single-line comment kar sakte hain.
+
+# This is a comment
+-----------------------
+puts "Hello, Ruby!"  # This will print a message
+
+
+ Basic Operations (Arithmetic):
+ ---------------------------------
+ Ruby mein aap normal arithmetic operations kar sakte hain, jaise addition, subtraction, multiplication, etc.
+
+a = 10
+b = 5
+
+puts a + b   # Addition
+puts a - b   # Subtraction
+puts a * b   # Multiplication
+puts a / b   # Division
+puts a % b   # Modulus (remainder)
+puts a ** b  # Exponentiation
 
 
 
