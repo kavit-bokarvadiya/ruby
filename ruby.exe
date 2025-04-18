@@ -359,12 +359,32 @@ puts a / b   # Division
 puts a % b   # Modulus (remainder)
 puts a ** b  # Exponentiation
 
+data type
+----------
+
+1) string::
+
+String ek data type hai jo characters ka collection hota hai, jaise letters, numbers, symbols, spaces, etc. Ruby mein string ko double quotes (" ") ya single quotes (' ') mein likha jaata hai.
+
+example
+----------
+"Hello, World!"     # double quotes
+'Ruby Programming'  # single quotes
+"12345"             # bhi string hai
+"!"                 # ek symbol bhi ek string ban sakta hai
+" "                 # ek space bhi valid string hai
 
 
+User name: "Kavit"
+Email address: "kavit@example.com"
+Message: "Your order has been placed."
 
-
-
-
+Key Points About Strings in Ruby:
+--------------------------------------
+--> Strings are objects – Ruby mein sab kuch object hota hai, including strings.
+--> You can perform operations like joining, reversing, capitalizing, etc. on strings.
+--> Double quotes allow string interpolation (#{}), but single quotes nahi.
+--> Ruby internally treats string as a sequence of characters (array-like).
 
 Simple and clean syntax
 
