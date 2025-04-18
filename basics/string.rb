@@ -144,11 +144,16 @@
 # Batayo string empty hai ya nahi.
 # Uski length bhi print karo.
 
-print "enter any words :: "
-word = gets.chomp
-word_reverse = word.reverse
-puts "reverse word :: #{word_reverse}"
-word_empty_or_not = word.empty?
-puts "word enter or not :: #{word_empty_or_not}"
-length_of_word = word.length
-puts "length of word :: #{length_of_word}" 
+# print "enter any words :: "
+# word = gets.chomp
+# word_reverse = word.reverse
+# puts "reverse word :: #{word_reverse}"
+# word_empty_or_not = word.empty?
+# puts "word enter or not :: #{word_empty_or_not}"
+# length_of_word = word.length
+# puts "length of word :: #{length_of_word}" 
+
+
+print "enter your name:: "
+name = gets.chomp
+puts name
