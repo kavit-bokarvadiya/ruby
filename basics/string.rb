@@ -153,7 +153,21 @@
 # length_of_word = word.length
 # puts "length of word :: #{length_of_word}" 
 
+print "Enter your first name :: "
+f_name = gets.chomp.capitalize!
+print "Enter your last name :: "
+l_name = gets.chomp.capitalize!
+print "Enter your city :: "
+city = gets.chomp.capitalize!
+print "Enter your state :: "
+state = gets.chomp.upcase!
 
-print "enter your name:: "
-name = gets.chomp
-puts name
+print "hy #{f_name} #{l_name}, your city is #{city} and your state is #{state}"
+
+=begin
+Enter your first name :: kavyan
+Enter your last name :: jadav
+Enter your city :: gondal
+Enter your state :: gujrat
+hy Kavyan Jadav, your city is Gondal and your state is GUJRAT
+=end
